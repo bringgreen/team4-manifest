@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 503237308475.dkr.ecr.us-east-1.amazonaws.com/team4-ecr
   newName: 503237308475.dkr.ecr.us-east-1.amazonaws.com/team4-ecr
-  newTag: ee2d5bea
+  newTag: b694d28b
 resources:
 - ../../base
 patchesStrategicMerge:
