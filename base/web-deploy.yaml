@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deploy
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-deploy
+  template:
+    metadata:
+      labels:
+        app: web-deploy
+    spec:
+      containers:
+        - name: web-deploy
+          image: 503237308475.dkr.ecr.us-east-1.amazonaws.com/team4-ecr:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
